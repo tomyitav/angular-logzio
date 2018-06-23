@@ -121,6 +121,46 @@
           }
         }
       }
+    },
+    "angular-logz-io": {
+      "root": "projects/angular-logz-io",
+      "sourceRoot": "projects/angular-logz-io/src",
+      "projectType": "library",
+      "prefix": "ali",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angular-logz-io/tsconfig.lib.json",
+            "project": "projects/angular-logz-io/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/angular-logz-io/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-logz-io/src/test.ts",
+            "tsConfig": "projects/angular-logz-io/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-logz-io/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-logz-io/tsconfig.lib.json",
+              "projects/angular-logz-io/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-logzio"

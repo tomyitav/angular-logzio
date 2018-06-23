@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angular-logz-io": [
+        "dist/angular-logz-io"
+      ],
+      "angular-logz-io/*": [
+        "dist/angular-logz-io/*"
+      ]
+    }
   }
 }
