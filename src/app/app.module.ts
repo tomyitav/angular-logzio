@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AngularLogzIoModule, LogzioOptions } from 'angular-logz-io';
+import { AngularLogzIoModule, LogzioOptions, AbstractLogger, AngularLogzIoService } from 'angular-logz-io';
 
 @NgModule({
   declarations: [
@@ -14,6 +14,7 @@ import { AngularLogzIoModule, LogzioOptions } from 'angular-logz-io';
   ],
   providers: [
     { provide: LogzioOptions, useValue: { token: 'YOUR_LOGZIO_TOKEN' }},
+    { provide: AbstractLogger, useClass: AngularLogzIoService},
   ],
   bootstrap: [AppComponent]
 })

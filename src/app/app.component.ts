@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {AngularLogzIoService} from 'angular-logz-io';
+import {AbstractLogger} from 'angular-logz-io';
 
 @Component({
   selector: 'ali-root',
@@ -8,12 +8,13 @@ import {AngularLogzIoService} from 'angular-logz-io';
 })
 export class AppComponent {
 
-  constructor(private logz: AngularLogzIoService) {
+  constructor(private logz: AbstractLogger) {
   }
 
   title = 'angular-logz-io';
 
   testService() {
+    console.log('Logging to logz.io');
     this.logz.info('got event logzio');
   }
 }
