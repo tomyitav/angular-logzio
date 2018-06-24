@@ -4,7 +4,7 @@ Integrate logzio logging in your Angular app.
 
 ## Installation
 
-`npm i --save 'angular-logz-io'`
+`npm i --save logzio-nodejs angular-logz-io`
 
 ## How to use in app code
 
