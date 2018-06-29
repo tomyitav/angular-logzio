@@ -1,6 +1,6 @@
 {
   "name": "angular-logz-io",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": ["elk", "logging", "angular", "typescript", "logzio"],
   "author": "Tom <tomyitav@gmail.com>",
   "repository": {
