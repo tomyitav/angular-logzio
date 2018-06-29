@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import * as logzio from 'logzio-nodejs';
+import {Injectable} from '@angular/core';
+import {LogzioTs} from 'logzio-ts';
 
 export abstract class AbstractLogger {
   protected abstract log(level: string, message: string);
@@ -41,13 +41,14 @@ export class AngularLogzIoService extends AbstractLogger {
   }
 
   protected log(level: string, message: string) {
-    this._logger.log(level + ': ' + message);
+    this._logger.log({
+      level,
+      message
+    });
   }
 
   private initializeLogger() {
     const token = this.options.token || '';
-    this._logger = logzio.createLogger({
-      token
-    });
+    this._logger = new LogzioTs(token);
   }
 }
