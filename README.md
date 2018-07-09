@@ -1,5 +1,7 @@
 # angular-logz-io
 
+[![Build Status](https://travis-ci.org/tomyitav/logzio-ts.svg?branch=master)](https://travis-ci.org/tomyitav/logzio-ts)
+
 Integrate logzio logging in your Angular app. 
 
 ## Installation
